@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="imcv3.css">
+</head>
+<body>
+    <!--fazendo os input para perguntar o peso e a altura utilizei o comando label para destacar as caixa  -->
+    <!--utilizei o comando  input e coloqui uma id para ligar com a função de botao e soma  depois de horas  aprendi -->
+    <!--vendo o exercicio passado  identifiquei um comando novo fieldset cria um campo em volta-->
+    <div id="pai">
+    <fieldset id="campoentrada">
+    <label for="caixa1">Peso(KG)<input type="number" id="caixa1"></label>
+    <label for="caixa2">Altura(CM)<input type="number" id="caixa2"></label>
+    <div id="divfilha"><button onclick="somar ()" id="somar"> Calcular</button></div>
+    </fieldset>
+    <fieldset id="camposaida">
+        <!--achei mais um comando novo legend  antes estava utilizando label para informar mas este legend e melhor-->
+        <legend>Situação</legend>
+        <label for="resultado" id="mostraimc">IMC</label><input type="text" id="resultado" disabled>
+        <input type="text" id="campo"  disabled>
+    </fieldset>
+    </div>
+    <script>
+        function somar(){
+            var caixa1=parseFloat(document.getElementById("caixa1").value)
+            var caixa2=parseFloat(document.getElementById("caixa2").value)
+            var imc=caixa1/(caixa2**2)
+            document.getElementById("resultado").value=imc
+            if(imc<17){
+                document.getElementById("campo").value='Muito abaixo do peso'
+            }
+            if(imc>17 && imc<18.49){
+                document.getElementById("campo").value=' Abaixo do peso'
+
+            }   
+            if(imc>18.50 && imc<24.99){
+                document.getElementById("campo").value=' Peso normal'
+            }
+            if (imc>25 && imc<29.99){
+                document.getElementById("campo").value=' Acima do peso'
+            }
+            if(imc>30 && imc<34.99){
+                document.getElementById("campo").value= "Obesidade 1"
+            }
+            if(imc>35 && imc<39.99){
+                document.getElementById("campo").value=' Obesidade 2 (severa)'
+            
+            }
+            if (imc>40){
+                document.getElementById("campo").value=' Obesidade 3 (mórbida)'
+            }
+
+            
+         
+        }
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+#pai{
+    width: 500px;
+  background-color: white;
+}
+#campoentrada{
+    width: 400px;
+    height: 200px;
+    border-radius: 5%;
+    background-color: rgb(198, 195, 195);
+    border: 3px rgb(16, 16, 16) solid;
+
+}
+#camposaida{
+    width: 500px;
+    height: 100px;
+    border-radius: 5%;
+    background-color: rgb(198, 195, 195);
+    border: 3px rgb(39, 37, 37) solid;
+}
+#caixa1{
+    width: 500px;
+    height: 30px;
+}
+#caixa2{
+    width: 500px;
+    height: 30px;
+}
+#campo{
+    width: 500px;
+    height: 30px;
+}
+#resultado{
+    width: 500px;
+    height: 30px;
+}
+#mostraimc{
+    color: rgb(10, 10, 10);
+    width: 50PX;
+}
